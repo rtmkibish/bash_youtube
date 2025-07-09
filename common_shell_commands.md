@@ -1,7 +1,12 @@
 ## Navigation
 
-[Tar archive](#tar)
-[Date](#date)
+ - [Shell variables](#shell-variables)
+ - [Tar archive](#tar)
+ - [Date](#date)
+
+### Shell variables
+ - **PATH** - Contains list of paths with executables
+ - **HOME** - Contains the path to the current user's home directory
 
 
 #### Tar
