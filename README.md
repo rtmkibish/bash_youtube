@@ -3,10 +3,12 @@
 ## Navigation
 
  - [Changing Shell](#changing-shell)
+ - [Shell parameters](#shell-parameters)
+   - [Variable assignments](#variable-assignments)
+ - [Shell variables](#shell-variables)
  - [File permissions](#file-permissions)
  - [Changing file permissions](#changing-file-permission)
  - [Executing scripts](#executing-scripts)
- - [Shell variables](#shell-variables)
  - [Tar archive](#tar)
  - [Date](#date)
 
@@ -17,6 +19,25 @@
 > Use the `whereis` command to get the full path to the required shell. eg: `whereis bash` -> `/bin/bash`
 
 > Or `chsh -s "$(whereis bash)"`
+
+### Shell parameters
+ - Variables - a parameter whose value can be changed manually
+ - Positional parameters
+ - Special parameters
+
+#### Variable assignments
+Syntax:
+
+`var="some text value"` - Assigns the *some text value* text to the `var` variable
+
+`var=$(date)` - Assign the result of the `date` operation to the `var` variable
+
+> The alternative to the $() syntax is the `` syntax
+
+### Shell variables
+ - **PATH** - Contains list of paths with executables
+ - **HOME** - Contains a path to the current user's home directory
+ - **SHELL** - Contains a path to the current shell
 
 ### File permissions
 `drwx r-x r-x <number> <username> <files group name>`
@@ -69,11 +90,6 @@ Examples:
  - `source` - executes the provided file **in the current shell**. Does not require the file to be executable. In the BASH shell the `source` is a synonym to the `.` command. The ZSH shell does not require a path to the file if the file is in the current directory.
  - `./<script_file_name>` - executes the file **in a new shell**. Requires the file to be executable.
  - `<script_file_name>`- executes the file **in a new shell**. Requires the file to be executable and the folder with the file must be added to the `PATH` variable.
-
-### Shell variables
- - **PATH** - Contains list of paths with executables
- - **HOME** - Contains a path to the current user's home directory
- - **SHELL** - Contains a path to the current shell
 
 
 #### Tar
